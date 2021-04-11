@@ -227,7 +227,7 @@ def update_position(self):
     # set stop-loss price $10 away from the high/low of the current candle
     if self.is_long:
         self.take_profit = qty, self.high - 10
-    else:
+    else: # is_short
         self.take_profit = qty, self.low + 10
 ```
 
