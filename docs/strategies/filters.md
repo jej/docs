@@ -32,7 +32,7 @@ Wrong example:
 ```py
 def filters(self):
     return [
-        self.filter_1()
+        self.filter_1() # DON'T DO THAT (parentheses)
     ]
 ```
 :::
