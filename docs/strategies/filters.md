@@ -58,7 +58,7 @@ For example let's write a filter that makes sure the minimum PNL for trades is b
 def minimum_pnl_filter(self):
     reward_per_qty = abs(self.average_take_profit - self.average_entry_price)
     pnl_percentage = (reward_per_qty / self.average_entry_price) * 100
-    return pnl_percentage > 1
+    return True if pnl_percentage > 1
 ```
 
 Notice that we are using `self.average_entry_price` and `self.average_take_profit` properties which were not available inside `should_long()` methods.
